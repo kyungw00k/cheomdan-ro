@@ -8,7 +8,6 @@ echo "[$DATE] Capture Image"
 # Capture
 # https://www.raspberrypi.org/documentation/raspbian/applications/camera.md
 raspistill \
-	-v \
         -w 1920 \
         -h 1080 \
 	-ex night \
