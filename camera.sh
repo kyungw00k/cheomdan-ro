@@ -12,13 +12,13 @@ raspistill \
         -w 1920 \
         -h 1080 \
 	-ex night \
-	-o /root/cheomdan-ro/snapshots/$FILENAME.jpg && \
+	-o /home/pi/cheomdan-ro/snapshots/$FILENAME.jpg && \
 # Overlay Text
-/usr/bin/convert /root/cheomdan-ro/snapshots/$FILENAME.jpg \
+/usr/bin/convert /home/pi/cheomdan-ro/snapshots/$FILENAME.jpg \
 	-pointsize 36 -fill white -annotate +1520+1040 "$DATE" \
-	-pointsize 36 -fill white -annotate +40+1040 'Cheomdan Ro, Jeju-si' /root/cheomdan-ro/snapshots/$FILENAME.overlay.jpg
+	-pointsize 36 -fill white -annotate +40+1040 'Cheomdan Ro, Jeju-si' /home/pi/cheomdan-ro/snapshots/$FILENAME.overlay.jpg
 
 echo "[$DATE] Update Symbolic Link"
 
-rm /root/cheomdan-ro/snapshots/latest.jpg
-ln -s /root/cheomdan-ro/snapshots/$FILENAME.overlay.jpg /root/cheomdan-ro/snapshots/latest.jpg
+rm /home/pi/cheomdan-ro/snapshots/latest.jpg
+ln -s /home/pi/cheomdan-ro/snapshots/$FILENAME.overlay.jpg /home/pi/cheomdan-ro/snapshots/latest.jpg
