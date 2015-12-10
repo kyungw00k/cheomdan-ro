@@ -40,5 +40,6 @@ Add file `/etc/pm/power.d/wireless`
 #### Add Crontab
 Run script weekdays
 ```
-*/5 06-20 * * 1-5 camera.sh
+*/5 06-20 * * 1-5 /home/pi/cheomdan-ro/camera.sh >> /home/pi/cheomdan-ro/logs/camera_`date +\%Y\%m\%d`.log 2>&1
+0 0 * * * /home/pi/cheomdan-ro/remove_old_files.sh
 ```
