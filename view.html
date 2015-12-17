@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cheomdan-ro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+<section class="page-header">
+    <h1 class="project-name">Cheomdan-ro, Jeju-si</h1>
+</section>
+
+<section class="main-content">
+    <script type="text/javascript">
+        function timestamp() {
+            var now = new Date();
+            var yyyy = now.getFullYear();
+            var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+            var dd = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+            var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+            var min = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+            return "".concat(yyyy).concat(mm).concat(dd).concat(hh).concat(min);
+        }
+        var base = "http://t1.daumcdn.net/thumb/@1x/?fname=http%3A%2F%2Fcheomdan-ro.dev.9rum.cc%2Flatest.jpg?ts=";
+        document.write(unescape('%3Cimg width="100%" src="' + base + timestamp() + '" alt="Cheomdan-ro, Jeju-si" %3E'));
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5559425044364726"
+         data-ad-slot="8617937232"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/kyungw00k/cheomdan-ro">Cheomdan-ro</a> is maintained by <a href="https://github.com/kyungw00k">kyungw00k</a>.</span>
+    </footer>
+</section>
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-42462820-1");
+        pageTracker._trackPageview();
+    } catch (err) {}
+</script>
+</body>
+
+</html>
