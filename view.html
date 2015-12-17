@@ -6,6 +6,11 @@
     <title>Cheomdan-ro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <style>
+        .responsive_ad { width: 320px; height: 100px; }
+        @media(min-width: 500px) { .responsive_ad { width: 468px; height: 60px; } }
+        @media(min-width: 800px) { .responsive_ad { width: 728px; height: 90px; } }
+    </style>
 </head>
 
 <body>
@@ -28,7 +33,7 @@
         document.write(unescape('%3Cimg width="100%" src="' + base + timestamp() + '" alt="Cheomdan-ro, Jeju-si" %3E'));
     </script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
+    <ins class="adsbygoogle responsive_ad"
          style="display:block"
          data-ad-client="ca-pub-5559425044364726"
          data-ad-slot="8617937232"
