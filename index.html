@@ -20,9 +20,7 @@
                 var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
                 var dd = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
                 var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
-                var min = now.getMinutes();
-                min = min - (min % 5);
-                min = min < 10 ? "0" + min : min;
+                var min = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
                 return "".concat(yyyy).concat(mm).concat(dd).concat(hh).concat(min);
             }
             var base = "http://t1.daumcdn.net/thumb/@1x/?fname=http%3A%2F%2Fcheomdan-ro.dev.9rum.cc%2Flatest.jpg?ts=";
