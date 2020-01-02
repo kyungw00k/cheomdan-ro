@@ -70,29 +70,23 @@
                   preloader.parentNode.removeChild(preloader);
                   preloader = null;
                 }
-                var IMGUR_IMAGES_API_ENDPOINT = 'https://api.imgur.com/3/account/kyungw00k/images'
-                var reqHeaders = new Headers()
-                reqHeaders.append("Authorization", 'Bearer 775bc88c0ef8334f05cad60778cf60624421ecbf')
 
-                fetch(IMGUR_IMAGES_API_ENDPOINT, {
-                    headers: reqHeaders
-                  })
-                  .then(function (response) {
-                    response
-                      .json()
-                      .then(function (json) {
-                        if (json.success && json.data && json.data.length) {
-                          renderImage(json.data[0].link)
-                        }
-                      })
-                      .catch(function (err) {
-                        renderImage('')
-                      })
-                  })
+                function timestamp() {
+                    var now = new Date();
+                    var yyyy = now.getFullYear();
+                    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+                    var dd = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+                    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+                    var minDiff = now.getMinutes() - (now.getMinutes() % 3)
+                    var min = minDiff < 10 ? "0" + minDiff : minDiff
 
+                    return "".concat(yyyy).concat(mm).concat(dd).concat(hh).concat(min);
+                }
+                
                 function renderImage(url) {
                   var img = document.createElement("IMG");
                   img.className = "responsive-img hide";
+                  img.setAttribute('alt', 'Cheomdan-ro, Jeju-si');
                   img.onload = function () {
                     hidePreloader();
                     document.getElementById('snapshot-img').appendChild(img);
@@ -104,7 +98,8 @@
                   };
                   img.src = url;
                 }
-
+                
+                renderImage("http://t1.daumcdn.net/thumb/@1x/?fname=http%3A%2F%2Fcheomdan-ro.dev.9rum.cc%2Flatest.jpg?ts=" + timestamp())
               </script>
             </div>
           </div>
